@@ -1,0 +1,286 @@
+.hero-container {
+display:flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+background: var(--gradient-hero);
+border-radius:30px 10px 40px 20px;
+box-shadow: 0 30px 80px var(--glow-purple);
+padding: 20px;
+position:relative;
+overflow:hidden;
+}
+
+.hero-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 30px;
+}
+
+.hero-text{
+font-size: 16px;
+font-weight: 400;
+line-height: 1.2;
+letter-spacing: 1em;
+color: var(--text-muted);
+}
+
+.hero-title{
+font-size: 56px;
+font-weight: 700;
+line-height: 1;
+}
+
+.hero-description {
+text-align:center;
+background:var(--glass-bg);
+border:2px solid var(--glass-border);
+border-top-right-radius: 26px;
+border-bottom-left-radius: 26px;
+padding:26px;
+backdrop-filter:blur(10px);
+font-size: 24px;
+font-weight: 500;
+line-height: 1.5;
+color: var(--text-secondary);
+}
+
+.hero-description span {
+color:var(--color-primary);
+text-shadow: 0 0 10px var(--glow-blue);
+font-weight:600;
+}
+
+.btn-play {
+position: relative;
+overflow: hidden;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+font-weight: 700;
+padding: 18px 36px;
+border: 2px solid var(--color-primary);
+border-radius: 24px;
+background: var(--gradient-button);
+color: var(--text-primary);
+box-shadow: 0 0 20px var(--glow-blue);
+transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* біла лінія при ховері на кнопці */
+.btn-play::before {
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:70%;
+height:100%;
+background: var(--gradient-linear);
+transform:skewX(-25deg);
+transition: .3s;
+}
+
+.btn-play:hover::before {
+left:130%;
+}
+
+.btn-play:hover,
+.btn-play:focus{
+border-color: var(--color-accent);
+}
+
+.hero-list{
+display:flex;
+flex-direction: row;
+align-items: center;
+gap: 32px;
+}
+
+.hero-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 240px;
+height: 100px;
+position: relative;
+overflow: hidden;
+border: 1px solid var(--glass-border);
+border-radius: 20px;
+background: var(--glass-bg);
+backdrop-filter: blur(10px);
+padding: 20px;
+color: var(--text-secondary);
+transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-item:hover {
+transform: translateY(-10px);
+border-color: var(--color-primary);
+box-shadow: 0 0 20px var(--glow-blue), 0 0 40px rgba(0,207,255,.2);
+}
+
+.hero-item span {
+display:block;
+font-size: 32px;
+color: var(--text-primary);
+text-shadow: 0 0 10px var(--glow-blue);
+}
+
+.hero-img {
+position: relative;
+width: 55%;
+display: flex;
+align-items: center;
+z-index: 2;
+}
+
+.hero-img img {
+width: 100%;
+max-width: 520px;
+height: auto;
+object-fit: contain;
+}
+
+.ring {
+position: absolute;
+animation:
+ringSpin 2s linear infinite;
+filter:
+drop-shadow(0 0 20px var(--glow-gold));
+}
+
+.hero-rings {
+position:absolute;
+inset:0;
+pointer-events:none;
+}
+
+.ring-one {
+top:10%;
+right:25%;
+width:100px;
+animation-duration: 2s;
+}
+
+.ring-two {
+bottom:25%;
+right:40%;
+width:100px;
+animation-duration: 1.8s;
+}
+
+.ring-three {
+bottom:25%;
+left:10%;
+width:100px;
+animation-duration: 1s;
+}
+
+@media (max-width: 1024px) {
+.hero-container {
+flex-direction: column; 
+padding: 26px;
+gap: 20px;
+}
+
+.hero-content{
+gap: 26px;
+}
+
+.hero-text{
+font-size: 14px;
+letter-spacing: 0.9em;
+}
+
+.hero-title{
+font-size: 52px;
+}
+
+.hero-description {
+padding:20px;
+font-size: 20px;
+}
+
+.hero-list{
+gap: 20px;
+}
+
+.hero-item {
+width: 200px;
+}
+
+.ring-one {
+top:25%;
+right:15%;
+}
+
+.ring-two {
+bottom:25%;
+right:15%;
+}
+
+.ring-three {
+bottom:25%;
+left:10%;
+}
+}
+
+@media (max-width: 640px){
+.hero-container {
+padding: 16px;
+gap: 10px;
+}
+
+.hero-content{
+gap: 16px;
+}
+
+.hero-text{
+text-align:center;
+line-height: 1;
+font-size: 12px;
+letter-spacing: 0.8em;
+}
+
+.hero-title{
+text-align:center;
+font-size: 48px;
+}
+
+.hero-description {
+padding:10px;
+font-size: 18px;
+}
+
+.hero-list{
+flex-direction: column;
+gap: 10px;
+}
+
+.hero-item {
+width: 200px;
+}
+
+.ring-one {
+top:35%;
+right:5%;
+width: 25%;
+}
+
+.ring-two {
+bottom:10%;
+right: 5%;
+width: 25%;
+}
+
+.ring-three {
+bottom:10%;
+left:5%;
+width: 25%;
+}
+}

@@ -12,8 +12,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: #0b1023;
-  color: #ffffff;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
@@ -53,10 +53,30 @@ img {
 }
 
 .container {
-  width: min(100% - 32px, 1200px);
-  margin: 0 auto;
+width: min(100% - 32px, 1200px);
+margin: 0 auto;
 }
 
 section {
-  padding: 80px 0;
+ padding: 80px 0;
+}
+
+@media (max-width: 1024px) {
+.container {
+width: min(100% - 48px, 960px);
+}
+
+section {
+padding: 64px 0;
+}
+}
+
+@media (max-width: 640px) {
+.container {
+width: calc(100% - 32px);
+}
+
+section {
+padding: 48px 0;
+}
 }

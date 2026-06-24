@@ -1,0 +1,24 @@
+/* поява соніка */
+
+.hero-img {
+animation:
+heroReveal .3s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes heroReveal {
+from {
+opacity:0;
+transform:
+translateX(120px)
+scale(.85)
+rotate(8deg);
+}
+
+to {
+opacity:1;
+transform:
+translateX(0)
+scale(1)
+rotate(0);
+}
+}
