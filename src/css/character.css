@@ -1,0 +1,250 @@
+#characters {
+position: relative;
+overflow: hidden;
+padding: 60px 0;
+background: var(--gradient-character);
+}
+
+/* декоративні лінії як в about */
+#characters::before {
+content:"";
+position:absolute;
+inset:0;
+background: var(--gradient-linear-about);
+pointer-events:none;
+}
+
+.characters-heading {
+position:relative;
+text-align:center;
+margin-bottom:30px;
+}
+
+.characters-title {
+font-size:52px;
+font-weight:700;
+line-height:1.1;
+color:var(--text-primary);
+margin-bottom:30px;
+}
+
+.characters-text {
+font-size:18px;
+line-height:1.6;
+color:var(--color-accent);
+}
+
+/* slider */
+.characters-slider {
+position:relative;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.characters-list {
+display:flex;
+gap:20px;
+overflow:hidden;
+width:100%;
+padding:20px;
+}
+
+/* картка героя */
+.character-item {
+position:relative;
+flex-shrink:0;
+width:330px;
+min-height:600px;
+padding:10px;
+background: var(--gradient-card);
+border:2px solid var(--glass-border);
+border-radius:35px 15px 35px 15px;
+backdrop-filter:blur(12px);
+display:flex;
+flex-direction:column;
+align-items:center;
+color:var(--text-secondary);
+transition:
+transform .35s ease,
+border-color .35s ease,
+box-shadow .35s ease;
+overflow:hidden;
+}
+
+/* світлова пляма */
+.character-item::before {
+content:"";
+position:absolute;
+width:200px;
+height:200px;
+top:-80px;
+right:-80px;
+background:var(--glow-blue);
+filter:blur(80px);
+opacity:.5;
+}
+
+.character-item:hover {
+transform:translateY(-15px) scale(1.03);
+border-color:var(--color-primary);
+box-shadow:0 0 25px var(--glow-blue), 0 0 50px rgba(0,207,255,.2);
+}
+
+.character-item img {
+position:relative;
+z-index:2;
+width:220px;
+height:220px;
+object-fit:contain;
+filter: drop-shadow(0 0 20px var(--glow-blue));
+transition: all .3s ease;
+}
+
+.character-item:hover img {
+transform:scale(1.1);
+filter: drop-shadow(0 0 30px var(--glow-gold));
+}
+
+.heroi-name {
+font-size:24px;
+font-weight:700;
+text-align:center;
+margin:20px 0;
+color:var(--text-primary);
+text-shadow: 0 0 10px var(--glow-blue);
+}
+
+/* підписи */
+.character-item span {
+font-weight:700;
+color:var(--color-accent);
+}
+
+.characters-cart-syla {
+font-size:20px;
+font-weight:600;
+color:var(--text-primary);
+}
+
+.characters-cart-text {
+font-size:15px;
+line-height:1.5;
+color:var(--text-secondary);
+text-align:center;
+}
+
+.character-item ul {
+list-style:none;
+}
+
+.character-item li {
+position:relative;
+padding-left:18px;
+}
+
+.character-item li::before {
+content:"";
+position:absolute;
+left:0;
+top:8px;
+width:8px;
+height:8px;
+border-radius:50%;
+background:var(--color-accent);
+box-shadow:
+0 0 10px var(--glow-gold);
+}
+
+/* кнопки */
+.slider-btn {
+width:60px;
+height:60px;
+border-radius:50%;
+border:2px solid var(--color-primary);
+background:var(--glass-bg);
+color:var(--text-primary);
+font-size:30px;
+cursor:pointer;
+box-shadow:
+0 0 20px var(--glow-blue);
+transition: all .3s ease;
+}
+
+.slider-btn:hover {
+background:var(--gradient-button);
+border-color:var(--color-accent);
+transform:scale(1.15);
+}
+
+/* точки */
+.slider-dots {
+display:flex;
+justify-content:center;
+gap:12px;
+}
+
+
+.slider-dots span {
+width:12px;
+height:12px;
+border-radius:50%;
+background:var(--glass-border);
+}
+
+.slider-dots .active {
+background:var(--color-accent);
+box-shadow: 0 0 15px var(--glow-gold);
+}
+
+@media(max-width:1024px){
+.characters-title{
+font-size:46px;
+}
+
+.character-item{
+width:300px;
+}
+}
+
+@media(max-width:640px){
+
+#characters{
+padding:50px 0;
+}
+
+.characters-title{
+font-size:38px;
+}
+
+
+.characters-text{
+font-size:15px;
+}
+
+.characters-slider{
+gap:10px;
+
+}
+
+.characters-list{
+gap:20px;
+padding:10px;
+}
+
+.character-item{
+width:280px;
+min-height:560px;
+}
+
+.character-item img{
+width:180px;
+height:180px;
+}
+
+.slider-btn{
+width:45px;
+height:45px;
+font-size:22px;
+}
+}

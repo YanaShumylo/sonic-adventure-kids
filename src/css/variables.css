@@ -81,4 +81,11 @@
     rgba(255,255,255,.05) 80px,
     rgba(255,255,255,.05) 84px
     );
+  --gradient-character:
+    linear-gradient(
+    135deg,
+  #0b1023 0%,
+  #131b35 45%,
+  #0047ab 100%
+    );
 }
