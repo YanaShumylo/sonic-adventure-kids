@@ -64,6 +64,21 @@
       transparent, 
       rgba(255,255,255,0.5),
       transparent 
-      );
+    );
+  
+  --gradient-about:
+    linear-gradient(
+      135deg,
+    #7c3aed 65%,
+    #1b2550 100%
+    );
 
+  --gradient-linear-about:
+    repeating-linear-gradient(
+      -25deg,
+      transparent 0,
+      transparent 80px,
+    rgba(255,255,255,.05) 80px,
+    rgba(255,255,255,.05) 84px
+    );
 }
