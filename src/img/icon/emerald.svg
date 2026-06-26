@@ -1,0 +1,50 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+
+        <!-- Градієнт -->
+        <linearGradient id="emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7CF8FF"></stop>
+            <stop offset="35%" stop-color="#00CFFF"></stop>
+            <stop offset="70%" stop-color="#00A3FF"></stop>
+            <stop offset="100%" stop-color="#7C3AED"></stop>
+        </linearGradient>
+
+        <!-- Світіння -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+            <feMerge>
+                <feMergeNode in="blur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+
+    </defs>
+
+    <!-- Основна форма -->
+    <polygon points="32,3 50,18 44,48 32,61 20,48 14,18" fill="url(#emerald)" filter="url(#glow)"></polygon>
+
+    <!-- Верхня грань -->
+    <polygon points="32,6 45,18 32,24 19,18" fill="white" opacity=".18"></polygon>
+
+    <!-- Ліва грань -->
+    <polygon points="19,18 32,24 26,49 20,48" fill="white" opacity=".08"></polygon>
+
+    <!-- Права грань -->
+    <polygon points="45,18 32,24 38,49 44,48" fill="#0039A8" opacity=".18"></polygon>
+
+    <!-- Центральна грань -->
+    <polygon points="32,24 38,49 26,49" fill="white" opacity=".06"></polygon>
+
+    <!-- Відблиск -->
+    <path d="M25 12
+           L31 8
+           L28 22
+           Z" fill="white" opacity=".55"></path>
+
+    <!-- Тонкі лінії граней -->
+    <polyline points="32,6 32,61" stroke="white" stroke-opacity=".18" stroke-width="1"></polyline>
+
+    <polyline points="19,18 32,24 45,18" stroke="white" stroke-opacity=".16" stroke-width="1" fill="none"></polyline>
+
+</svg>
