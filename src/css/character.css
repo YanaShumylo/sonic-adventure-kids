@@ -1,7 +1,7 @@
 #characters {
 position: relative;
 overflow: hidden;
-padding: 60px 0;
+padding: 40px 0;
 background: var(--gradient-character);
 }
 
@@ -17,15 +17,16 @@ pointer-events:none;
 .characters-heading {
 position:relative;
 text-align:center;
-margin-bottom:30px;
+margin-bottom:20px;
 }
 
 .characters-title {
+text-align:center;
 font-size:52px;
 font-weight:700;
 line-height:1.1;
 color:var(--text-primary);
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
 .characters-text {
@@ -46,15 +47,15 @@ gap:10px;
 display:flex;
 gap:20px;
 overflow:hidden;
-width:100%;
-padding:20px;
+scroll-behavior: smooth;
+padding:30px;
 }
 
 /* картка героя */
 .character-item {
 position:relative;
 flex-shrink:0;
-width:330px;
+flex: 0 0 calc((100% - 40px) / 3);
 min-height:600px;
 padding:10px;
 background: var(--gradient-card);
@@ -125,6 +126,9 @@ color:var(--color-accent);
 font-size:20px;
 font-weight:600;
 color:var(--text-primary);
+margin-bottom: 10px;
+text-align: center;
+max-width: 100%;
 }
 
 .characters-cart-text {
@@ -134,13 +138,22 @@ color:var(--text-secondary);
 text-align:center;
 }
 
-.character-item ul {
+.description{
+margin-bottom: 20px;
+}
+
+.list-text{
 list-style:none;
+display: flex;
+flex-direction: column;
+align-items: start;
 }
 
 .character-item li {
 position:relative;
 padding-left:18px;
+text-align: left;
+width: fit-content;
 }
 
 .character-item li::before {
@@ -158,8 +171,8 @@ box-shadow:
 
 /* кнопки */
 .slider-btn {
-width:60px;
-height:60px;
+width:50px;
+height:50px;
 border-radius:50%;
 border:2px solid var(--color-primary);
 background:var(--glass-bg);
@@ -168,6 +181,7 @@ font-size:30px;
 cursor:pointer;
 box-shadow:
 0 0 20px var(--glow-blue);
+padding: 6px;
 transition: all .3s ease;
 }
 
@@ -203,7 +217,7 @@ font-size:46px;
 }
 
 .character-item{
-width:300px;
+flex: 0 0 calc((100% - 20px) / 2);
 }
 }
 
@@ -223,18 +237,17 @@ font-size:15px;
 }
 
 .characters-slider{
-gap:10px;
+gap:8px;
 
 }
 
 .characters-list{
-gap:20px;
-padding:10px;
+gap:8px;
+padding:6px;
 }
 
 .character-item{
-width:280px;
-min-height:560px;
+flex: 0 0 100%;
 }
 
 .character-item img{
@@ -243,8 +256,6 @@ height:180px;
 }
 
 .slider-btn{
-width:45px;
-height:45px;
-font-size:22px;
+display: none;
 }
 }
