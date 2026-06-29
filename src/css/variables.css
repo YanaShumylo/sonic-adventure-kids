@@ -81,6 +81,7 @@
     rgba(255,255,255,.05) 80px,
     rgba(255,255,255,.05) 84px
     );
+
   --gradient-character:
     linear-gradient(
     135deg,
@@ -96,4 +97,23 @@
   #ff9d00 40%,
   #4c1d95 120%
   );
+
+  --gradient-worlds:
+    linear-gradient(
+    135deg,
+  #53d2ff,
+  #007bff 35%,
+  #24c76b 65%,
+  #0b315d
+  );
+
+  --gradient-linear-worlds: 
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.45),
+    transparent
+    );
+
+  
 }

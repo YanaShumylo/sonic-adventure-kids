@@ -1,0 +1,200 @@
+#worlds{
+position:relative;
+overflow:hidden;
+background: var(--gradient-worlds);
+}
+
+.worlds-title{
+text-align:center;
+font-size: 52px;
+font-weight: 700;
+line-height: 1.1;
+margin-bottom:55px;
+}
+
+/* лінія після title */
+.worlds-title::after{
+content:"";
+display:block;
+width:280px;
+height:10px;
+margin:25px auto 0;
+border-radius:30px;
+background: var(--gradient-faq);
+}
+
+.worlds-title span{
+display:block;
+color:var(--color-accent);
+}
+
+.worlds-description{
+text-align:center;
+font-size:24px;
+line-height:1.6;
+color:var(--bg-primary);
+margin-bottom:55px;
+}
+
+.worlds-list{
+display:flex;
+flex-direction:column;
+gap:32px;
+}
+
+.world-card{
+position:relative;
+display:flex;
+align-items:stretch;
+overflow:hidden;
+border-radius:24px;
+background:var(--bg-primary);
+border:2px solid var(--glass-border);
+transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.world-card:hover{
+transform:translateY(-10px);
+border-color: var( --color-accent-hover);
+}
+
+/* пробігаюча біла смуга по картці */
+.world-card::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background: var(--gradient-linear-worlds);
+transition: all .3s ease;
+pointer-events:none;
+z-index:2;
+}
+
+.world-card:hover::before{
+left:140%;
+}
+
+.world-img,
+.world-content{
+position:relative;
+z-index:1;
+}
+
+.world-img{
+width:40%;
+min-width:40%;
+border-radius:22px 0 0 22px;
+object-fit:cover;
+transition: transform .3s ease;
+}
+
+.world-card:hover .world-img{
+transform:scale(1.04);
+}
+
+/* міняємо розташування фото-текст текст-фото */
+.world-card:nth-child(even){
+flex-direction:row-reverse;
+}
+
+/* щоб кольора лінія була між фото та текстом */
+.world-card:nth-child(even) .world-content::before{
+left:auto;
+right:0;
+}
+
+.world-content{
+position:relative;
+flex:1;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:40px;
+background: var(--gradient-character);
+}
+
+/* кольорова вертикальна лінія між зображенням і текстом */
+.world-content::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:8px;
+height:100%;
+background: var(--gradient-faq);
+}
+
+.world-content-title{
+font-size: 24px;
+font-weight: 700;
+line-height: 1.2;
+text-transform:uppercase;
+color:var(--color-accent);
+margin-bottom:20px;
+}
+
+.world-content-disc{
+font-size:18px;
+line-height:1.9;
+color:var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+.worlds-title {
+font-size: 48px;
+}
+
+.world-card,
+.world-card:nth-child(even){
+flex-direction:column;
+}
+
+.world-img{
+width:100%;
+height:460px;
+border-radius:22px 22px 0 0;
+}
+
+.world-content{
+width:100%;
+padding:28px;
+}
+
+.world-content::before{
+width:100%;
+height:8px;
+top:0;
+left:0;
+right:auto;
+}
+
+.world-content-title {
+font-size: 22px;
+font-weight: 600;
+line-height: 1;
+}
+}
+
+@media (max-width:640px){
+.world-content{
+text-align:center;
+}
+
+.world-img{
+width:100%;
+height:auto;
+object-fit:unset;
+border-radius:22px 22px 0 0;
+}
+
+.worlds-title {
+font-size: 40px;
+}
+
+.world-content-disc{
+font-size:16px;
+line-height:1.5;
+}
+}
