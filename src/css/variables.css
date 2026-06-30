@@ -115,5 +115,12 @@
     transparent
     );
 
+  --linear-mob-nav:
+    linear-gradient(
+    90deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  ); 
   
 }
