@@ -1,0 +1,83 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="portal">
+<stop stop-color="#00cfff"/>
+<stop offset="0.5" stop-color="#8b5cf6"/>
+<stop offset="1" stop-color="#0066ff"/>
+</linearGradient>
+<linearGradient id="letter">
+<stop stop-color="#ffffff"/>
+<stop offset="0.5" stop-color="#00cfff"/>
+<stop offset="1" stop-color="#8b5cf6"/>
+</linearGradient>
+<filter id="glow">
+<feGaussianBlur stdDeviation="12"/>
+</filter>
+</defs>
+
+<!-- background -->
+<rect width="512"
+height="512"
+rx="120"
+fill="#0b1023"/>
+
+<!-- portal glow -->
+<circle cx="256"
+cy="256"
+r="150"
+stroke="#00cfff"
+stroke-width="25"
+opacity=".25"
+filter="url(#glow)"/>
+
+<!-- cyber ring -->
+<circle cx="256"
+cy="256"
+r="145"
+fill="#131b35"
+stroke="url(#portal)"
+stroke-width="22"/>
+
+<!-- inner ring -->
+<circle cx="256"
+cy="256"
+r="95"
+fill="none"
+stroke="#ffd700"
+stroke-width="10"
+opacity=".9"/>
+
+<!-- particles -->
+<circle cx="90"
+cy="110"
+r="14"
+fill="#00cfff"/>
+
+<circle cx="410"
+cy="150"
+r="14"
+fill="#8b5cf6"/>
+
+<circle cx="420"
+cy="390"
+r="14"
+fill="#ffd700"/>
+
+<circle cx="100"
+cy="380"
+r="10"
+fill="#00cfff"/>
+
+<!-- S -->
+<text x="256"
+y="330"
+text-anchor="middle"
+font-family="Arial Black, Arial"
+font-size="230"
+font-weight="900"
+fill="url(#letter)"
+stroke="#ffffff"
+stroke-width="3">
+S
+</text>
+</svg>

@@ -21,8 +21,8 @@ align-items:center;
 }
 
 .header-logo {
-width:52px;
-height:52px;
+width:222px;
+height:82px;
 object-fit:contain;
 transition: transform .3s ease;
 }
@@ -103,6 +103,11 @@ color:var(--color-primary);
 }
 
 @media(max-width:1024px){
+.header-logo {
+width:182px;
+height:62px;
+}
+
 .nav-list{
 gap:18px;
 }
@@ -118,8 +123,8 @@ height:70px;
 }
 
 .header-logo{
-width:45px;
-height:45px;
+width:142px;
+height:62px;
 }
 
 .header-nav{
